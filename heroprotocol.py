@@ -91,7 +91,7 @@ if __name__ == '__main__':
         protocol = __import__('protocol%s' % (baseBuild,))
     except:
         # TODO search for the lates build
-        protocol = __import__('protocol76003')
+        protocol = __import__('protocol76124')
 
     # Print protocol details
     if args.details:
