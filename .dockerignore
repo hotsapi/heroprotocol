@@ -1,0 +1,7 @@
+.git
+**/*.StormReplay
+*.pyc
+venv
+Replays
+.idea
+*.iml
