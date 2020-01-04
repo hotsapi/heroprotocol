@@ -20,6 +20,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+import os
+import re
 import sys
 import argparse
 import pprint
@@ -90,8 +92,10 @@ if __name__ == '__main__':
     try:
         protocol = __import__('protocol%s' % (baseBuild,))
     except:
-        # TODO search for the lates build
-        protocol = __import__('protocol76124')
+        files = [int(re.search(r'^protocol([0-9]+)\.py$', f).group(1)) for f in os.listdir('.') if re.match(r'^protocol[0-9]+\.py$', f)]
+        files.sort(reverse=True)
+        protocol = __import__('protocol%s' % files[0])
+
 
     # Print protocol details
     if args.details:
