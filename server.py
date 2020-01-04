@@ -12,7 +12,7 @@ api = Flask(__name__)
 
 @api.route('/<filename>', methods=['GET'])
 def parse_replay(filename):
-    archive = mpyq.MPQArchive('/tmp/%s.StormReplay' % filename)
+    archive = mpyq.MPQArchive('/tmp/%s' % filename)
     resp = {}
 
     # Read the protocol header, this can be read with any protocol
