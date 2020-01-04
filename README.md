@@ -1,4 +1,4 @@
-# heroprotocol.py
+# heroprotocol.py [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/hotsapi/heroprotocol.svg?logo=docker)](https://hub.docker.com/r/hotsapi/heroprotocol/builds)
 
 heroprotocol.py is a series of reference [Python](https://www.python.org/downloads/) scripts and standalone tool to decode Heroes of the Storm replay files into Python data structures.
 
